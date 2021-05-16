@@ -4,6 +4,14 @@ import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
 
+    let title = props.title;
+
+    const changeDescription = ()=>{
+
+        title = 'Updated';
+        console.log(title);
+        
+    }
 
     return (
 
@@ -15,7 +23,7 @@ const ExpenseItem = (props) => {
                 <h2> {props.expenseDescription} </h2>
             </div>
             <div className="expense-item__price"> ${props.expenseAmount} </div>
-            
+            <button onClick = {changeDescription}>Change Title</button>
         </Card>
 
     );
