@@ -5,17 +5,22 @@ import './ExpenseItem.css';
 const ExpenseItem = (props) => {
     
     return (
-        
-        <Card className="expense-item" id = {props.expenseId}>
 
-            <ExpenseDate expenseDate={props.expenseDate}/>
+        <li>
 
-            <div className="expense-item__description">
-                <h2> {props.expenseDescription} </h2>
-            </div>
-            <div className="expense-item__price"> ${props.expenseAmount} </div>
+            <Card className="expense-item" id = {props.expenseId}>
 
-        </Card>
+                <ExpenseDate expenseDate={props.expenseDate}/>
+
+                <div className="expense-item__description">
+                    <h2> {props.expenseDescription} </h2>
+                </div>
+                
+                <div className="expense-item__price"> ${props.expenseAmount} </div>
+
+            </Card>
+
+        </li>
 
     );
 }
