@@ -14,7 +14,7 @@ const ChartBar = (props) => {
 
         <div
           className="chart-bar__fill"
-          style={{ width: barFillHeight }}
+          style={{ height: barFillHeight }}
         ></div>
 
       </div>
