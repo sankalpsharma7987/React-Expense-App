@@ -78,7 +78,7 @@ const ExpenseForm = (props)=>{
     const submitHandler = (event)=>{
 
         event.preventDefault();
-        const expenseData = {amount: enteredAmount,date: new Date(enteredDate),title: enteredDescription}
+        const expenseData = {amount: +enteredAmount,date: new Date(enteredDate),title: enteredDescription} //+ is added  with enteredAmount to convert it from string to number.
         props.onSaveExpenseData(expenseData);
         setEnteredAmount('');
         setEnteredDate('');
